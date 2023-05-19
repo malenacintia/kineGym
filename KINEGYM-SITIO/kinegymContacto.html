@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kineGym Kinesiología</title>
+    <script src="https://kit.fontawesome.com/d0a5dc628d.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lobster&family=Montserrat:wght@400;500&family=Roboto:ital,wght@0,300;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/estilosKinegym.css" />
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <div class="menu" id="menu">
+            <div class="logo"><i class="fa-solid fa-dumbbell"></i></div>
+            <nav class="navegacion">
+                <ul>
+                    <a href="kinegymInicio.html"><i class="fa-solid fa-house"></i>
+                        Inicio</a>
+
+                    <div class="dropdown">
+                        <a href="kinegymInicio.html#servicios" class="dropbtn"><i
+                                class="fa-solid fa-magnifying-glass-plus"></i>
+                            Servicios</a>
+                        <div class="dropdown-content">
+                            <a href="kinegymSPilates.html">Pilates</a><br>
+                            <a href="kinegymSGAH.html">Gimnasia hipopresiva</a><br>
+                            <a href="kinegymSKinesiologia.html">Kinesiologia</a><br>
+                            <a href="kinegymSParto.html">Preparación al parto</a><br>
+                        </div>
+                    </div>
+
+                    <a href="kinegymInicio.html#acercaDe"><i class="fa-solid fa-people-line"></i>
+                        Sobre nosotros</a>
+
+                    <a class="active" href="kinegymContacto.html"><i class="fa-solid fa-comment-dots"></i>
+                        Contacto</a>
+                </ul>
+            </nav>
+        </div>
+
+        <header class="header" id="headerjs">
+
+        </header>
+
+        <main class="contenido">
+            <h2>Nuestro newsletter</h2>
+            <hr>
+            <div class="formulario">
+                <form action="https://formspree.io/f/xknaellb"
+                method="POST" name="formulario" id="formulario" > 
+                    <fieldset>
+                        <label for="">Nombre </label> <br>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" cols="30" /> <br>
+
+                        <label for="">Apellido </label> <br>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" cols="30" />
+                        <br>
+
+                        <label for="">Número de teléfono </label> <br>
+                        <input type="number" id="tel" name="tel" placeholder="Ingrese su número de teléfono"
+                            cols="30" />
+                        <br>
+
+                        <label for="">Dirección de correo electrónico </label><br>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su e-mail" cols="30" /> <br>
+
+                        <label for=""> <input type="checkbox" name="opcion" value="0">
+                            Quiero que me contacten para una clase de prueba gratuita</label><br>
+
+                        <label for="">Quiero recibir información en mi correo electrónico de... </label><br><br>
+                        <input type="checkbox" name="opcion" value="1"> Promociones
+                        <input type="checkbox" name="opcion" value="2"> Tema mensual <br>
+                        <input type="checkbox" name="opcion" value="3"> Catálogo de servicios
+                        <input type="checkbox" name="opcion" value="4"> Cursos y formaciones <br>
+
+                        <label for="consulta">Una consulta que quieras realizar</label> <br>
+                        <textarea id="consulta" name="consulta" rows="5" cols="30"></textarea> <br>
+
+                        <input type="submit" id="b1" name="btn" value="Enviar" />
+                        <input id="boton_reset" type="reset" value="Reiniciar" /> <br>
+                        <span id="chequeo"> Tu mensaje se enviará cuando pulses "Enviar"</span><!--cambiar a "tu petición se ha enviado"
+                cuando se pulse (no me acuerdo si se hacia con css)
+                Tambien poner los campos como obligatorios
+                Dar formato con css  a todo (placeholder, boton de enviar, etc)-->
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+
+        <aside class="side">
+            <h2>¿Qué más ofrecemos en nuestras sesiones?</h2>
+            <!--<div class="containerAside">
+        <a href="kinegymServicios.html#"><img src="img/pilates.jpg" alt="Pilates">
+            <div class="texto-imagenAside" title="Clases en máquinas y en suelo">Pilates</div>
+        </a>
+    </div>-->
+            <div class="otrosServicios">
+                <div class="containerAside">
+                    <a href="kinegymSPilates.html">
+                        <div class="textoAside"><i class="fa-solid fa-spa"></i> Clases de pilates</div>
+                    </a>
+                </div>
+                <div class="containerAside">
+                    <a href="kinegymSGAH.html">
+                        <div class="textoAside"><i class="fa-solid fa-x-ray"></i> Gimnasia abdominal hipopresiva</div>
+                    </a>
+                </div>
+                <div class="containerAside">
+                    <a href="kinegymSKinesiologia.html">
+                        <div class="textoAside"><i class="fa-solid fa-bone"></i> Sesiones de Kinesiología
+                        </div>
+                    </a>
+                </div>
+                <div class="containerAside">
+                    <a href="kinegymSKinesiologia.html">
+                        <div class="textoAside"><i class="fa-solid fa-desktop"></i> Kinesiología online</div>
+                    </a>
+                </div>
+                <div class="containerAside">
+                    <a href="kinegymSParto.html">
+                        <div class="textoAside"><i class="fa-solid fa-person-pregnant"></i> Preparación al parto</div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="boton"><a target="_blank" href="/archivos/cronograma.pdf">Descargá nuestro cronograma de
+                    clases</a></div>
+        </aside>
+
+        <div class="ubicacion">
+            <hr>
+            <h2>¿DONDE ESTAMOS?</h2>
+            <iframe id="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.3970753242!2d-58.57338494756602!3d-34.61546111637758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2ses!4v1679086756793!5m2!1ses!2ses"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" scrolling="yes">Como ir desde tu ubicación</iframe>
+            <!--se desborda mapa-->
+        </div>
+        
+        <footer class="foot" id="footerjs">
+            
+        </footer>
+    </div>
+    <script src="js/jsKinegym.js"></script>
+</body>
+
+</html>
