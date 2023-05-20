@@ -9,8 +9,8 @@ document.getElementById("headerjs").innerHTML = cad;
 cad = `
 <div class="redes">
 <p>Seguinos en nuestras redes sociales</p>
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
-<a href="#"><i class="fa-regular fa-envelope"></i></a>
+<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+<a href="mailto:malenacintia@.com"><i class="fa-regular fa-envelope"></i></a>
 </div>
 <div class="logo">
 <i class="fa-solid fa-dumbbell"></i>
@@ -76,17 +76,17 @@ var validarEnviar = function (e) {
 
 formulario.addEventListener("submit", validarEnviar)
 
- document.getElementById("b1").addEventListener("click", function () {
+document.getElementById("b1").addEventListener("click", function () {
     if (validarEnviar !== alert) {
         console.log("Se envió el mensaje")
         document.getElementById("chequeo").innerHTML = "¡Se envió tu mensaje!";
     }
-}); 
+});
 
 document.getElementById("boton_reset").addEventListener("click", function () {
     document.getElementById("chequeo").innerHTML = `Tu mensaje se enviará cuando pulses "Enviar"`
     console.log("Se reinició el formulario");
-}); 
+});
 
 //INTENTO FORMSPREE
 const form = document.querySelector("#formulario")
@@ -111,7 +111,7 @@ async function handlesubmit(event) {
 
 
 //APIREST CITAS
- var mostrar = document.querySelector('#mostrar')
+var mostrar = document.querySelector('#mostrar')
 
 function traer() {
     fetch('https://api.themotivate365.com/stoic-quote')
@@ -119,14 +119,16 @@ function traer() {
         .then(json => {
             console.log(json)
             document.getElementById("mostrar").innerHTML = `
-                    <div style="background-color:grey" width="auto" heigth="40px">
-                    <h3>Nombre: ${json.author}</h3>
-                    <p>Mail: ${json.quote}</p>
+                    <div class="apirest">
+                    <h3>Autor: ${json.author}</h3>
+                    <p>"${json.quote}"</p>
                     </div>
                     `
+
         })
-        .catch(error => console.log("Ocurrió un error", error)) 
+        .catch(error => console.log("Ocurrió un error", error))
 }
+
 
 
 

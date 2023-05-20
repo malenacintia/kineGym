@@ -159,6 +159,7 @@
    text-align: center;
   max-width: 68%; 
   padding: 1rem;
+  font-weight: normal;
  } 
   
   #infoInicial { background-color:rgb(221, 236, 231);}
@@ -342,7 +343,7 @@
     color:aliceblue
   }
 
-  .botonnews {
+  .botonnews, .apirest, .botonApi{
     border: solid 2px  rgb(108, 206, 173);
     border-radius: 8%;
     padding-top: 2rem;
@@ -354,7 +355,6 @@
     background-color: aliceblue;
     text-align: center;
     font-weight: bolder;
-    box-shadow: rgb(27, 97, 129);
     width: fit-content;
   }
   
@@ -365,11 +365,24 @@
   }
   
   .botonnews:hover {
-    color: aliceblue;
     background-color: rgb(108, 206, 173);
     border: solid 2px aliceblue;
   }
-  
+
+  .botonApi {
+    background-color: rgba(108, 206, 173, 0.534) ; 
+  }
+
+  .apirest {
+    background-color: rgba(108, 206, 173, 0.384) ; 
+    width:70%;
+    margin: 10px auto;
+  }
+
+#mostrar{
+  padding-bottom: 10px;
+}
+   
   footer {
   background-color:rgb(61, 59, 59);
   padding: 2%;}
@@ -666,7 +679,19 @@ iframe{
     display: none;
   }
 
-  .container:hover {
+  .container img {
+    max-width: 100%;
+    height: auto;
+    width: 90%;
+  }
+  .texto-imagen {
+    width: 80%;
+  }
+  .container {
+    position: relative;
+    display: inline-block;
+  }
+    .container:hover {
     opacity: 1;
   }
   .container:hover img {
@@ -730,10 +755,6 @@ iframe{
         "contenido contenido side"
         "ubicacion ubicacion side"
         "foot foot foot";
-}
-
-.banner {
-  overflow-x: hidden  
 }
   }
   
