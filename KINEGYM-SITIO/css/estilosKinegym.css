@@ -707,6 +707,8 @@ iframe{
     }  
 
   .ubicacion { margin:0px;}
+  
+  form {overflow-x:scroll;}
 }
 
   /* Small devices (600px and up) */

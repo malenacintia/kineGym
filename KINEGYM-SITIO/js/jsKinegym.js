@@ -19,13 +19,13 @@ cad = `
 <div class="menu">
 <nav class="navegacion" id="navFoot">
     <ul>
-        <a href="kinegymInicio.html"><i class="fa-solid fa-house"></i>
+        <a href="index.html"><i class="fa-solid fa-house"></i>
             Inicio</a>
 
-        <a href="kinegymInicio.html#servicios"><i class="fa-solid fa-magnifying-glass-plus"></i>
+        <a href="index.html#servicios"><i class="fa-solid fa-magnifying-glass-plus"></i>
             Servicios</a>
 
-        <a href="kinegymInicio.html#acercaDe"><i class="fa-solid fa-people-line"></i>
+        <a href="index.html#acercaDe"><i class="fa-solid fa-people-line"></i>
             Sobre nosotros</a>
 
         <a class="active" href="kinegymContacto.html"><i class="fa-solid fa-comment-dots"></i>
@@ -68,16 +68,19 @@ var validarCheckbox = function (e) {
         e.preventDefault()
     }
 }
+
 var validarEnviar = function (e) {
     validarNombre(e);
     validarTel(e);
     validarCheckbox(e);
+    e.preventDefault()
 }
 
 formulario.addEventListener("submit", validarEnviar)
 
+//creo que el erro esta en el if siguiente y luego debo trasladarlo al formspree
 document.getElementById("b1").addEventListener("click", function () {
-    if (validarEnviar !== alert) {
+    if (validarEnviar.ok) {
         console.log("Se envió el mensaje")
         document.getElementById("chequeo").innerHTML = "¡Se envió tu mensaje!";
     }
@@ -108,6 +111,7 @@ async function handlesubmit(event) {
         alert("Gracias por contactarnos, nos comunicaremos pronto.")
     }
 }
+
 
 
 //APIREST CITAS
