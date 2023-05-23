@@ -753,7 +753,11 @@ iframe {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-  p {
+  p, a, ul, h3, .texto-imagen {
     font-size: 30px;
+  }
+
+  .botonApi, form, .boton{
+    font-size: 25px;
   }
 }
