@@ -733,7 +733,7 @@ iframe {
   }
 }
 
-/* Large devices (992px and up) */
+/* Medium devices (992px and up) */
 @media only screen and (min-width: 992px) {
   .contenedor {
     width: 100%;
@@ -748,5 +748,12 @@ iframe {
       "contenido contenido side"
       "ubicacion ubicacion side"
       "foot foot foot";
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  p {
+    font-size: 30px;
   }
 }
