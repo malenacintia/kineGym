@@ -91,7 +91,7 @@ document.getElementById("boton_reset").addEventListener("click", function () {
     console.log("Se reinició el formulario");
 });
 
-//INTENTO FORMSPREE
+//INTENTO API FORMSPREE
 const form = document.querySelector("#formulario")
 
 form.addEventListener(`submit`, handlesubmit)
@@ -114,7 +114,7 @@ async function handlesubmit(event) {
 
 
 
-//APIREST CITAS
+//APIREST CITAS ESTOICAS
 var mostrar = document.querySelector('#mostrar')
 
 function traer() {
