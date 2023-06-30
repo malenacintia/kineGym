@@ -2,9 +2,12 @@ let cad = `
 <div class="banner">
 <img src="img/banner.jpg">
 </div> 
-`
+`;
 
-document.getElementById("headerjs").innerHTML = cad;
+if (document.getElementById("headerjs")) {
+
+    document.getElementById("headerjs").innerHTML = cad;
+}
 
 cad = `
 <div class="redes">
@@ -34,85 +37,90 @@ cad = `
 </nav>
 </div>
 `
-document.getElementById("footerjs").innerHTML = cad;
+
+if (document.getElementById("footerjs")) {
+
+    document.getElementById("footerjs").innerHTML = cad;
+}
 
 
 //VALIDAR FORMULARIO
 
-var formulario = document.getElementsByName('formulario')[0];
-elementos = formulario.elements,
-    boton = document.getElementById('b1');
+if (document.getElementById("formulario")) {
 
-var validarNombre = function (e) {
-    if (formulario.nombre.value == 0) {
-        alert("Completa el campo nombre.");
-        e.preventDefault();
+    var formulario = document.getElementsByName('formulario')[0];
+    elementos = formulario.elements,
+        boton = document.getElementById('b1');
+
+    var validarNombre = function(e) {
+        if (formulario.nombre.value == 0) {
+            alert("Completa el campo nombre.");
+            e.preventDefault();
+        }
     }
-}
 
-var validarTel = function (e) {
-    if (formulario.tel.value == 0) {
-        alert("Completá tu número de teléfono.");
-        e.preventDefault();
+    var validarTel = function(e) {
+        if (formulario.tel.value == 0) {
+            alert("Completá tu número de teléfono.");
+            e.preventDefault();
+        }
     }
-}
 
-var validarCheckbox = function (e) {
-    if (formulario.opcion[0].checked == true ||
-        formulario.opcion[1].checked == true ||
-        formulario.opcion[2].checked == true ||
-        formulario.opcion[3].checked == true ||
-        formulario.opcion[4].checked == true) {
-    } else {
-        alert("Selecciona al menos una opción.")
+    var validarCheckbox = function(e) {
+        if (formulario.opcion[0].checked == true ||
+            formulario.opcion[1].checked == true ||
+            formulario.opcion[2].checked == true ||
+            formulario.opcion[3].checked == true ||
+            formulario.opcion[4].checked == true) {} else {
+            alert("Selecciona al menos una opción.")
+            e.preventDefault()
+        }
+    }
+
+    var validarEnviar = function(e) {
+        validarNombre(e);
+        validarTel(e);
+        validarCheckbox(e);
         e.preventDefault()
     }
-}
 
-var validarEnviar = function (e) {
-    validarNombre(e);
-    validarTel(e);
-    validarCheckbox(e);
-    e.preventDefault()
-}
+    formulario.addEventListener("submit", validarEnviar)
 
-formulario.addEventListener("submit", validarEnviar)
-
-//creo que el erro esta en el if siguiente y luego debo trasladarlo al formspree
-document.getElementById("b1").addEventListener("click", function () {
-    if (validarEnviar.ok) {
-        console.log("Se envió el mensaje")
-        document.getElementById("chequeo").innerHTML = "¡Se envió tu mensaje!";
-    }
-});
-
-document.getElementById("boton_reset").addEventListener("click", function () {
-    document.getElementById("chequeo").innerHTML = `Tu mensaje se enviará cuando pulses "Enviar"`
-    console.log("Se reinició el formulario");
-});
-
-//INTENTO API FORMSPREE
-const form = document.querySelector("#formulario")
-
-form.addEventListener(`submit`, handlesubmit)
-
-async function handlesubmit(event) {
-    event.preventDefault()
-    const form = new FormData(this)
-    const response = await fetch(this.action, {
-        method: this.method,
-        body: form,
-        headers: {
-            "Accept": "application/json"
+    //creo que el erro esta en el if siguiente y luego debo trasladarlo al formspree
+    document.getElementById("b1").addEventListener("click", function() {
+        if (validarEnviar.ok) {
+            console.log("Se envió el mensaje")
+            document.getElementById("chequeo").innerHTML = "¡Se envió tu mensaje!";
         }
-    })
-    if (response.ok) {
-        this.reset()
-        alert("Gracias por contactarnos, nos comunicaremos pronto.")
+    });
+
+    document.getElementById("boton_reset").addEventListener("click", function() {
+        document.getElementById("chequeo").innerHTML = `Tu mensaje se enviará cuando pulses "Enviar"`
+        console.log("Se reinició el formulario");
+    });
+
+    //INTENTO API FORMSPREE
+    const form = document.querySelector("#formulario")
+
+    form.addEventListener(`submit`, handlesubmit)
+
+    async function handlesubmit(event) {
+        event.preventDefault()
+        const form = new FormData(this)
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: form,
+            headers: {
+                "Accept": "application/json"
+            }
+        })
+        if (response.ok) {
+            this.reset()
+            alert("Gracias por contactarnos, nos comunicaremos pronto.")
+        }
     }
+
 }
-
-
 
 //APIREST CITAS ESTOICAS
 var mostrar = document.querySelector('#mostrar')
@@ -132,8 +140,3 @@ function traer() {
         })
         .catch(error => console.log("Ocurrió un error", error))
 }
-
-
-
-
-
