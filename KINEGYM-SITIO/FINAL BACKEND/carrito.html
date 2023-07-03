@@ -25,14 +25,14 @@
       </thead>
       <tbody>
         <tr v-for="curso in cursos" :key="curso.codigo">
-          <td>{{ curso.codigo }}</td>
-          <td>{{ curso.descripcion }}</td>
-          <td align="right">{{ curso.cupo }}</td>
-          <td align="right">{{ curso.horario }} hs.</td>
-          <td align="right">&nbsp; &nbsp; {{ curso.precio }}</td>
+          <td align="center">{{ curso.codigo }}</td>
+          <td align="center">{{ curso.descripcion }}</td>
+          <td align="center">{{ curso.cupo }}</td>
+          <td align="center">{{ curso.horario }} hs.</td>
+          <td align="center">&nbsp; &nbsp; {{ curso.precio }}</td>
           <td class="agregarquitar">
         
-            <input type="number" id="reservas" name="reservas" v-model="cupo" required> 
+            <input type="number" id="reservas" name="reservas" v-model="cupo" required style="width: 30px;"> 
             <button @click="agregarAlCarrito(curso)">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</button>  
 
             <button @click="restarDelCarrito(curso)">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</button>
@@ -55,11 +55,11 @@
         </thead>
         <tbody>
           <tr v-for="item in carrito" :key="item.codigo">
-            <td>{{ item.codigo }}</td>
-            <td>{{ item.descripcion }}</td>
-            <td align="right">{{ item.cupo }}</td>
-            <td align="right">{{ item.horario }} hs.</td>
-            <td align="right">&nbsp; &nbsp; {{ item.precio }}</td>
+            <td align="center">{{ item.codigo }}</td>
+            <td align="center">{{ item.descripcion }}</td>
+            <td align="center">{{ item.cupo }}</td>
+            <td align="center">{{ item.horario }} hs.</td>
+            <td align="center">&nbsp; &nbsp; {{ item.precio }}</td>
           </tr>
         </tbody>
       </table>
