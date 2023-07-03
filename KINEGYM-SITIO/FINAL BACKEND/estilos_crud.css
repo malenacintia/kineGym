@@ -95,11 +95,17 @@ button, .boton a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 
 button:hover, .boton a:hover {
     background-color: #5bb458;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 
@@ -113,11 +119,17 @@ a {
     cursor: pointer;
     text-decoration: none;
     font-size: 85%;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 
 a:hover {
     background-color: #4d66d3;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 .button a{

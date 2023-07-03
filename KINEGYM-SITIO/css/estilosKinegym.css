@@ -22,6 +22,11 @@ body {
     text-align: center;
     font-size: 5vw;
     color: rgb(18, 39, 32);
+    font-weight: 0px;
+}
+
+h1{
+    font-weight: inherit;
 }
 
 
@@ -62,6 +67,7 @@ body {
     z-index: 1;
 }
 
+
 .logo {
     font-size: 4vw;
     margin: 2px;
@@ -88,15 +94,21 @@ ul {
 
 .navegacion a {
     color: white;
-    font-size: 16px;
+    font-size: 2.5vh;
     font-weight: 500;
     padding: 15px;
     text-decoration: none;
     text-align: center;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 .navegacion a:hover {
     background-color: rgb(27, 97, 129);
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 .active {
@@ -263,6 +275,7 @@ form {
     overflow-x: hidden;
     margin-bottom: 15px;
     margin-top: 15px;
+    overflow: scroll;
 }
 
 #nombre,
@@ -309,12 +322,23 @@ fieldset {
     border-radius: 10%;
     box-shadow: none;
     cursor: pointer;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+li{
+    list-style-type: none;
+    display: contents;
 }
 
 #b1:hover,
 #boton_reset:hover {
     background-color: rgb(27, 97, 129);
-    color: aliceblue
+    color: aliceblue;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 .botonnews,
@@ -332,6 +356,9 @@ fieldset {
     text-align: center;
     font-weight: bolder;
     width: fit-content;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 .botonnews a {
@@ -340,9 +367,14 @@ fieldset {
     font-size: 35px;
 }
 
+
+
 .botonnews:hover {
     background-color: rgb(108, 206, 173);
     border: solid 2px aliceblue;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 .botonApi {
@@ -381,6 +413,7 @@ footer p {
 .redes {
     margin: 5px;
     padding: 1%;
+    color: gainsboro;
 }
 
 #navFoot {
@@ -602,12 +635,18 @@ ul {
     color: rgb(61, 59, 59);
     text-decoration: none;
     font-size: 20px;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 .boton:hover {
     color: aliceblue;
     background-color: rgb(108, 206, 173);
     border: solid 2px aliceblue;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 
 .ubicacion {
@@ -689,7 +728,23 @@ iframe {
         margin: 0px;
     }
     form {
-        overflow-x: scroll;
+        margin: 0%;
+        width: 100%;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    .media{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu{
+        justify-content: center;
+    }
+    .logo{
+        font-size: 7vh;
     }
 }
 
