@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9e5;
+}
+
+
+.contenedor-centrado {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #6ac767;
+}
+
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+}
+
+
+table {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #72dd6e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #6ac767;
+}
+
+.agregarquitar {
+    display: flex;
+    justify-content: space-around;
+}
+
+#reservas {
+    margin: auto;
+}
+
+
+button, .boton a {
+    padding: 8px;
+    margin:4px;
+    font-weight: 300;
+    background-color: #6ac767;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button:hover, .boton a:hover {
+    background-color: #5bb458;
+}
+
+
+a {
+    padding: 8px;
+    margin:4px;
+    background-color: #798de2;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 85%;
+}
+
+
+a:hover {
+    background-color: #4d66d3;
+}
+
+.button a{
+    padding: 8px;
+    margin:4px;
+    background-color: #6ac767;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
