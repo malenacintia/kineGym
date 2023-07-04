@@ -25,7 +25,7 @@ body {
     font-weight: 0px;
 }
 
-h1{
+h1 {
     font-weight: inherit;
 }
 
@@ -66,7 +66,6 @@ h1{
     top: 0;
     z-index: 1;
 }
-
 
 .logo {
     font-size: 4vw;
@@ -181,6 +180,7 @@ p {
     max-width: 80%;
     padding: 1rem;
     font-weight: normal;
+    size: 100%;
 }
 
 #infoInicial {
@@ -327,7 +327,7 @@ fieldset {
     transition: background-color 200ms linear;
 }
 
-li{
+li {
     list-style-type: none;
     display: contents;
 }
@@ -366,8 +366,6 @@ li{
     text-decoration: none;
     font-size: 35px;
 }
-
-
 
 .botonnews:hover {
     background-color: rgb(108, 206, 173);
@@ -731,19 +729,17 @@ iframe {
         margin: 0%;
         width: 100%;
     }
-
-    iframe{
+    iframe {
         width: 100%;
     }
-
-    .media{
+    .media {
         display: flex;
         flex-direction: column;
     }
-    #menu{
+    #menu {
         justify-content: center;
     }
-    .logo{
+    .logo {
         font-size: 7vh;
     }
 }
