@@ -199,7 +199,26 @@ class Carrito:
                 self.conexion.commit()
                 return jsonify({'message': 'Curso quitado del carrito correctamente.'}), 200
         return jsonify({'message': 'El curso no se encuentra en el carrito.'}), 404
-
+    
+    #NUEVO METODO NO FUNCIONA
+    def quitar_todo(self, cupo, Cronograma):
+        '''for item in self.items:
+            if item.items == 0:
+                return jsonify({'message': 'No hay cursos en el carrito.'}), 400
+            if item.items > 0:
+                self.items.clear()
+            return jsonify({'message': 'Se han quitado todos los cursos del carrito correctamente.'}), 200
+            '''
+       #self.cursor.execute("SELECT * FROM cursos")
+        #cursos_carrito = []         
+        #cursos_carrito.clear()
+        for item in self.items:
+            if cupo > item.cupo:
+                return jsonify({'message': 'Cantidad a quitar mayor a la cupo en el carrito.'}), 400
+            item.cupo -= cupo
+            if item.cupo == 0:
+                self.items.remove(item)
+        return jsonify({'message': 'Se han quitado todos los cursos del carrito correctamente.'}), 200
             
     def mostrar(self):
         cursos_carrito = []
@@ -254,7 +273,7 @@ def agregar_curso():
     horario = request.json.get('horario')
     precio = request.json.get('precio')
     return cronograma.agregar_curso(codigo, descripcion, cupo, horario, precio)
-
+#
 # Ruta para modificar un curso del Cronograma
 @app.route('/cursos/<int:codigo>', methods=['PUT'])
 def modificar_curso(codigo):
@@ -285,6 +304,13 @@ def quitar_carrito():
     cronograma = Cronograma()
     return carrito.quitar(codigo, cupo, cronograma)
 
+#NUEVO METODO NO FUNCIONA
+@app.route('/carritonuevo', methods=['DELETE'])
+def quitar_todo_carrito():
+    cupo = request.json.get('cupo')
+    cronograma = Cronograma()
+    return carrito.quitar_todo(cupo, cronograma)
+
 # Ruta para obtener el contenido del carrito
 @app.route('/carrito', methods=['GET'])
 def obtener_carrito():
@@ -294,6 +320,18 @@ def obtener_carrito():
 if __name__ == '__main__':
     app.run()
 
+
+
+'''cronograma.agregar_curso(1, "Pilates lunes", 10, "08:00 hs", 19.99)
+cronograma.agregar_curso(13, "Pilates jueves", 10, "12:00 hs", 19.99)
+
+
+cronograma.listar_cursos()
+
+carrito.agregar(13, 1, cronograma)
+carrito.agregar(1, 1, cronograma)
+
+carrito.mostrar()'''
 
 '''
 # Agregar cursos al Cronograma
@@ -334,11 +372,3 @@ carrito.quitar(2, 1, cronograma)
 carrito.mostrar()
 cronograma.listar_cursos()
 '''
-
-
-
-
-
-
-
-

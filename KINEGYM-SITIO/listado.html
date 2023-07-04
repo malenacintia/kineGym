@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar cursos</title>
+    <link rel="stylesheet" href="estilos_crud.css">
+</head>
+
+<body>
+    <h1>Cronograma</h1>
+    <h3>Cupos disponibles</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Cupo</th>
+                <th>Horario</th>
+                <th align="right">Precio</th>
+            </tr>
+        </thead>
+        <tbody id="tablaCursos">
+        </tbody>
+    </table>
+
+    <div class="contenedor-centrado">
+        <a href="index2.html">Menu principal</a>
+    </div>
+
+    <script>
+        //const URL = "http://127.0.0.1:5000/"
+        const URL = "https://malenacintia.pythonanywhere.com/"
+
+        // Realizamos la solicitud GET al servidor para obtener todos los productos
+        fetch(URL + 'cursos')
+            .then(function(response) {
+                if (response.ok) {
+                    return response.json() // Parseamos la respuesta JSON
+                } else {
+                    throw new Error('Error al obtener los cursos.')
+                }
+            })
+            .then(function(data) {
+                var tablaCursos = document.getElementById('tablaCursos')
+
+                // Iteramos sobre los cursos y agregamos filas a la tabla
+                data.forEach(function(curso) {
+                    var fila = document.createElement('tr')
+                    fila.innerHTML = '<td>' + curso.codigo + '</td>' +
+                        '<td>' + curso.descripcion + '</td>' +
+                        '<td align="right">' + curso.cupo + '</td>' +
+                        '<td align="right">' + curso.horario + '</td>' +
+                        '<td align="right">&nbsp; &nbsp;&nbsp; &nbsp;' + curso.precio + '</td>'
+                    tablaCursos.appendChild(fila)
+                })
+            })
+            .catch(function(error) {
+                console.log('Error:', error)
+                alert('Error al obtener los cursos.')
+            })
+    </script>
+</body>
+
+</html>
