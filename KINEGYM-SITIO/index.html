@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lobster&family=Montserrat:wght@400;500&family=Roboto:ital,wght@0,300;0,700;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilosKinegym.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilosKinegym.css">
 </head>
 
 <body>
@@ -19,11 +19,11 @@
     <div class="menu" id="menu">
         <div class="logo"><i class="fa-solid fa-dumbbell"></i></div>
         <nav class="navegacion">
-            <ul>
-                <a href="index.html"><i class="fa-solid fa-house"></i>
-                    Inicio</a>
+            <ul class="media">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>
+                    Inicio</a></li>
 
-                <div class="dropdown">
+                <li><div class="dropdown">
                     <a href="index.html#servicios" class="dropbtn"><i
                             class="fa-solid fa-magnifying-glass-plus"></i>
                         Servicios</a>
@@ -34,19 +34,22 @@
                         <a href="kinegymSParto.html">Preparación al parto</a><br>
                     </div>
                 </div>
+                </li>
 
-                <a href="index.html#acercaDe"><i class="fa-solid fa-people-line"></i>
+                <li><a href="index.html#acercaDe"><i class="fa-solid fa-people-line"></i>
                     Sobre nosotros</a>
+                </li>
 
-                <a class="active" href="kinegymContacto.html"><i class="fa-solid fa-comment-dots"></i>
+                <li><a class="active" href="kinegymContacto.html"><i class="fa-solid fa-comment-dots"></i>
                     Contacto</a>
+                </li>
             </ul>
         </nav>
     </div>
     <header>
         <div class="imagen">
-            <img id="img_encabezado" src="img/fondo.jpg">
-            <span class="titulo">KineGym</span>
+            <img id="img_encabezado" src="img/fondo.jpg" alt="Kinegym">
+            <h1 class="titulo">KineGym</h1>
         </div>
     </header>
 
@@ -93,7 +96,7 @@
         </div>
     </section>
 
-    <section id="acercaDe" name="acercaDe">
+    <section id="acercaDe">
         <hr>
         <h2>Acerca de nosotros</h2>
 
@@ -114,10 +117,12 @@
 
         <div class="botonnews"><a href="kinegymContacto.html#formulario">Suscribite a <br>nuestro newsletter</a></div>
         <hr>
+        <h3>¿Ya sos alumno?</h3>
+        <div class="botonnews"><a href="index2.html">Reserva tu curso ahora</a></div>
         <div class="ubicacion" id="mapa">
             <h2>Donde encontrarnos</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.3970753242!2d-58.57338494756602!3d-34.61546111637758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2ses!4v1679086756793!5m2!1ses!2ses"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" scrolling="yes">Como ir desde tu ubicación</iframe>
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -133,18 +138,18 @@
         <p>2023 KineGym</p>
         <div class="menu">
             <nav class="navegacion" id="navFoot">
-                <ul>
-                    <a href="index.html"><i class="fa-solid fa-house"></i>
-                        Inicio</a>
+                <ul class="media">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>
+                        Inicio</a></li>
 
-                    <a href="index.html#servicios"><i class="fa-solid fa-magnifying-glass-plus"></i>
-                        Servicios</a>
+                    <li><a href="index.html#servicios"><i class="fa-solid fa-magnifying-glass-plus"></i>
+                        Servicios</a></li>
 
-                    <a href="index.html#acercaDe"><i class="fa-solid fa-people-line"></i>
-                        Sobre nosotros</a>
+                    <li><a href="index.html#acercaDe"><i class="fa-solid fa-people-line"></i>
+                        Sobre nosotros</a></li>
 
-                    <a class="active" href="kinegymContacto.html"><i class="fa-solid fa-comment-dots"></i>
-                        Contacto</a>
+                    <li><a class="active" href="kinegymContacto.html"><i class="fa-solid fa-comment-dots"></i>
+                        Contacto</a></li>
                 </ul>
             </nav>
         </div>
